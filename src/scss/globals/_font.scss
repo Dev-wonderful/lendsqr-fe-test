@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'open-sans';
+    src: url('../assets/OpenSans-Regular.woff2') format('woff2');
+    size-adjust: 100%;
+}
+@font-face {
+    font-family: 'open-sans-bold';
+    src: url('../assets/OpenSans-Bold.woff2') format('woff2');
+    size-adjust: 100%;
+}
+
+$font: 'open-sans';
+$fontBold: 'open-sans-bold'

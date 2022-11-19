@@ -1,0 +1,18 @@
+.dashboard-container{
+    width: 100%;
+    min-height: 100vh;
+    height: fit-content;
+    background-color: rgba(46, 75, 132, 0.048);
+    font-size: 1rem;
+
+    @media(min-width: 900px){
+        display: grid;
+        grid-template-columns: 300px 1fr;
+    }
+
+
+    .main{
+        width: 100%;
+        height: fit-content;
+    }
+}

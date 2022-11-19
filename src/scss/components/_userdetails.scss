@@ -1,0 +1,175 @@
+.user-details-container{
+    height: fit-content;
+    width: min(100% - 40px);
+    margin-inline: auto;
+    margin-top: 60px;
+    // background-color: green;
+    
+    @media(min-width: 900px){
+        display: grid;
+        grid-template-rows: auto 1fr;
+        row-gap: 30px;
+    }
+    header{
+        // background-color: yellow;
+        margin-bottom: 30px;
+        width: min(100% - 40px);
+        margin-inline: auto;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 10px;
+
+        
+        a,
+        h2{
+            color: hsl(220,48%,35%);
+        }
+        a{
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .top{
+            // background-color: blue;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+            
+            .button-container{
+                min-height: fit-content;
+                justify-self: end;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                // background-color: yellow;
+                gap: 20px;
+
+                .blacklist,
+                .activate{
+                    margin-inline: 10px;
+                    padding: 10px 15px 10px 15px;
+                    border-radius: 10px;
+                    min-width: fit-content;
+                    background-color: transparent;
+                    cursor: pointer;
+                }
+
+                .blacklist{
+                    border: 1px solid red;
+                    color: red;
+                }
+
+                .activate{
+                    border: 1px solid hsl(180,60%,51%);
+                    color: hsl(180,60%,51%);
+                }
+            }
+        }
+    }
+    main{
+        width: min(100% - 40px);
+        min-height: fit-content;
+        // background-color: yellowgreen;
+        color: hsl(220,48%,35%);
+        margin-inline: auto;
+
+        .detail-summary{
+            background-color: white;
+            min-height: 200px;
+            padding-inline: 30px;
+            width: 100%;
+            display: grid;
+            grid-template-rows: 1fr 50px;
+
+            
+            .intro{
+                width: min(100%, 900px);
+                height: 100%;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                place-items: center;
+                justify-content: start;
+                // background-color: red;
+                margin-inline: auto;
+                padding-top: 30px;
+                padding-bottom: 20px;
+                gap: 20px;
+
+                
+                section{
+                    width: 100%;
+                    min-height: 90%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    word-wrap: break-word;
+                    // flex-wrap: wrap;
+                    gap: 20px;
+                    // background-color: plum;
+
+                    .passport{
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        background-color: hsl(180,60%,51%);
+                    }
+                }
+                div{
+                    height: 90%;
+                    display: grid;
+                    grid-template-rows: 1fr 1fr;
+                    align-items: end;
+                   
+
+                    .emphasis{
+                        font-size: 1.3rem;
+                    }
+                    // span{
+                    //     height: 90%;
+                    // }
+                    .id{
+                        align-self: start;
+                    }
+                }
+            }
+            .user-details-category{
+                width: 100%;
+                color: black;
+                // background-color: red;
+                overflow-x: scroll;
+                // overflow-x: hidden;
+                display: grid;
+                grid-template-columns: repeat(6, minmax(150px, 150px));
+                justify-items: center;
+                align-items: end;
+                scrollbar-width: 0;
+                
+
+                
+
+                a{
+                    cursor: pointer;
+                    width: 100%;
+                    text-align: center;
+                    text-decoration: none;
+                    color: inherit;
+                }
+
+                a:hover{
+                    color: hsl(180,60%,51%);
+                    border-bottom: 2px solid hsl(180,60%,51%);
+                }
+                a:focus{
+                    color: hsl(180,60%,51%);
+                    border-bottom: 2px solid hsl(180,60%,51%);
+                }
+            }
+
+            .user-details-category::-webkit-scrollbar{
+                 width: 0;
+                // height: 10px;
+                
+            }
+        }
+    }
+}

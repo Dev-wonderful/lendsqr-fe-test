@@ -1,0 +1,71 @@
+//login page layout styles
+//mobile first
+.login-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .15fr 1fr;
+    height: max(100vh, 100%);
+
+    &__nav,
+    &__hero{
+        padding: 20px;
+    }
+
+    &__nav{
+        background-color: white;
+        position: relative;
+        img{
+            width: 150px;
+            height: 20px;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+    &__hero{
+        background-color: white;
+    }
+
+    
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+
+    //targetting other devices apart from mobile for grid template
+    @media(min-width: 900px){
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 30px;
+    }
+
+    &__child,
+    &__login{
+        padding: 20px;
+    }
+
+    &__child{
+        background-color: white;
+
+        img{
+            min-width: 200px;
+            width: min(100%, 500px);
+            display: block;
+            margin: auto;
+        }
+    }
+
+    &__login{
+        background-color: none;
+    }
+}
+
+//dashboard page layout styles
+
+.dashboard-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+}

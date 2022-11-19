@@ -1,0 +1,107 @@
+@use '../globals/font';
+
+.navbar{
+    background-color: none;
+    width: 100%;
+    height: 100px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+
+    //900px min-width
+    @media(min-width: 56.25em){
+        display: grid;
+        grid-template-columns: .6fr 1fr .7fr;
+        align-items: center;
+        // justify-content: center;
+    }
+
+    .search,
+    .nav-extra-details{
+        display: none;
+
+        @media(min-width: 56.25em){
+            display: block;
+        }
+    }
+
+    .logo{
+        height: 40px;
+    }
+
+    .search{
+        // background-color: yellow;
+        height: 50px;
+        
+        input{
+            height: 50px;
+            width: 400px;
+            border: 1px solid rgb(184, 164, 164);
+            margin: 0;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-right: none;
+        }
+        input::placeholder{
+            font-size: 1rem;
+            color: rgb(184, 164, 164);
+            padding-left: 10px;
+        }
+
+        button{
+            background-color: hsl(180,60%,51%);
+            display: inline-block;
+            height: 50px;
+            width: 70px;
+            text-align: center;
+            // line-height: 45px;
+            border: 1px solid hsl(180,60%,51%);
+            border-left: none;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            color: white;
+        }
+        
+    }
+
+    .nav-extra-details{
+        background-color: none;
+        height: 100px;
+
+        @media(min-width: 900px){
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            align-items: center;
+            justify-items: center;
+        }
+
+        img{
+            border-radius: 50%;
+            width: 70px;
+            background-color: red;
+            height: 70px;
+            outline: none;
+            // border-color: white;
+        }
+        
+        select, 
+        a, 
+        span{
+            background-color: none;
+            text-align: center;
+            line-height: 40px;
+            height: 50px;
+            color: hsl(220,48%,35%);
+            font-family: font.$fontBold;
+        }
+
+        select{
+            border: none;
+            width: 20px;
+            outline: none;
+            margin-left: 2px;
+        }
+    }
+}
