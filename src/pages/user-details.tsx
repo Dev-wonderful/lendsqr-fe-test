@@ -7,7 +7,7 @@ const UserDetails: React.FC<userDetailProps> = () => {
     return(
         <div className='user-details-container'>
             <header>
-                <Link to="/dashboard/users">&larr; Back to Users</Link>
+                <Link to="/dashboard">&larr; Back to Users</Link>
                 <div className='top'>
                     <h2>User Details</h2>
                     <div className='button-container'>

@@ -1,6 +1,7 @@
 import React from "react";
 import lendsqrLogo from '../assets/header-logo.svg';
 import loginLogo from '../assets/login.png'
+import { Link } from 'react-router-dom'
 
 interface LoginProps{}
 
@@ -21,7 +22,7 @@ const Login: React.FC<LoginProps> = () => {
                             <input type="password" name="password" id="" placeholder="Password"/>
                         </label>
                         <span>FORGOT PASSWORD?</span>
-                        <button type="submit">LOG IN</button>
+                        <button type="submit"><Link to="/dashboard">LOG IN</Link></button>
                     </form>
                 </section>
             </div>

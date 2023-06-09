@@ -36,14 +36,13 @@ p {
 .login-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.15fr 1fr;
+  grid-template-rows: 0.1fr 1fr;
   height: max(100vh, 100%);
 }
 .login-grid__nav, .login-grid__hero {
   padding: 20px;
 }
 .login-grid__nav {
-  background-color: white;
   position: relative;
 }
 .login-grid__nav img {
@@ -59,8 +58,16 @@ p {
 .grid-container {
   display: grid;
   grid-template-columns: minmax(300px, 1fr);
-  grid-template-rows: 1fr 1fr;
-  gap: 30px;
+  grid-template-rows: 300px 300px;
+  gap: 10px;
+}
+@media (min-width: 450px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr);
+    grid-template-rows: 400px 400px;
+    gap: 30px;
+  }
 }
 @media (min-width: 900px) {
   .grid-container {
