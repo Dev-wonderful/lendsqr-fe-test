@@ -16,10 +16,10 @@ const Login: React.FC<LoginProps> = () => {
                         <h3>Welcome!</h3>
                         <p>Enter details to login.</p>
                         <label htmlFor="email">
-                            <input type="email" name="email" id="" placeholder="Email"/>
+                            <input type="email" name="email" id="a" placeholder="Email"/>
                         </label>
                         <label htmlFor="password">
-                            <input type="password" name="password" id="" placeholder="Password"/>
+                            <input type="password" name="password" id="b" placeholder="Password"/>
                         </label>
                         <span>FORGOT PASSWORD?</span>
                         <button type="submit"><Link to="/dashboard">LOG IN</Link></button>

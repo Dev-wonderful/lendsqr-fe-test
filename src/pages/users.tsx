@@ -2,9 +2,23 @@ import React from 'react'
 import Summary from '../components/Summary'
 import Userlist from '../components/Userlist'
 
-interface UsersProps {}
 
-const Users: React.FC<UsersProps> = () => {
+interface User {
+    id: string;
+    orgName: string;
+    userName: string;
+    email: string;
+    phoneNumber: string;
+    lastActiveDate: string;
+    createdAt: string
+}
+// type JSONValue = User | number | string | {[x : string]: JSONValue} | Array<JSONValue>;
+interface UsersProps {
+    doUsers: Array<User>;
+}
+
+const Users: React.FC<UsersProps> = ({ doUsers }) => {
+    
     return(
         <section className="users-container">
             <header>
@@ -27,10 +41,20 @@ const Users: React.FC<UsersProps> = () => {
                     <span>STATUS</span>
                 </div>
                 <div className="user-list-container">
-                    <Userlist />
+                    {doUsers.map((user: User) => {
+                        return <Userlist 
+                                key={+user.id}
+                                username={user.userName}
+                                organization={user.orgName}
+                                phoneNumber={user.phoneNumber}
+                                email={user.email}
+                                date={user.lastActiveDate}
+                                status='Active'
+                                />
+                    })}
                 </div>
                 <div className="pagination">
-                    <span>Showing</span>
+                    {/* <span>Showing</span>
                     <select name="filter">
                         <option value="50">50</option>
                         <option value="100">100</option>
@@ -42,7 +66,7 @@ const Users: React.FC<UsersProps> = () => {
                         <span>2</span>
                         <span>3</span>
                         <button>next</button>
-                    </div>
+                    </div> */}
                 </div>
             </main>
         </section>

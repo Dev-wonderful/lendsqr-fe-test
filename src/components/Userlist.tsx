@@ -4,23 +4,23 @@ type status = "Active" | "Inactive"| "Pending" | "Blacklisted";
 
 interface UserlistProps {
     organization?: string,
-    usernme?: string,
+    username?: string,
     email?: string,
-    phoneNumber?: number,
+    phoneNumber?: string,
     date?: string,
     status?: status
 }
 
-const Userlist: React.FC<UserlistProps> = ({ organization, usernme, email, phoneNumber, date, status }) => {
+const Userlist: React.FC<UserlistProps> = ({ organization, username, email, phoneNumber, date, status }) => {
     return(
         <div className="user-list">
             <span>{organization}</span>
-            <span>{usernme}</span>
+            <span>{username}</span>
             <span>{email}</span>
             <span>{phoneNumber}</span>
             <span>{date}</span>
             <span>{status}</span>
-            <span>icon</span>
+            {/* <span>icon</span> */}
         </div>
     )
 }
